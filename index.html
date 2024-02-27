@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaše Jméno - Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .jumbotron {
+      background-color: #343a40;
+      color: #ffffff;
+    }
+    .portfolio-item {
+      margin-bottom: 30px;
+    }
+    .portfolio-item img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Vaše Jméno</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Domů <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">O mně</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Kontakt</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron text-center">
+  <h1 class="display-4">Vaše Jméno</h1>
+  <p class="lead">Webový vývojář a designer</p>
+</div>
+
+<!-- Portfolio -->
+<section id="portfolio" class="container">
+  <h2 class="text-center mb-4">Portfolio</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>Description of project 1</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>Description of project 2</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300" alt="Project 3">
+        <h3>Project 3</h3>
+        <p>Description of project 3</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Me -->
+<section id="about" class="container">
+  <h2 class="text-center mb-4">O mně</h2>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel orci at augue lacinia mattis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="container">
+  <h2 class="text-center mb-4">Kontakt</h2>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Jméno">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="5" placeholder="Zpráva"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Odeslat</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="container text-center mt-4">
+  <p>&copy; 2024 Vaše Jméno</p>
+</footer>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
