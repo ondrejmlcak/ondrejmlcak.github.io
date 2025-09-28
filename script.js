@@ -5,16 +5,19 @@ const themeDesktop = document.getElementById('themeSwitchDesktop');
 const themeMobile = document.getElementById('themeSwitchMobile');
 const bodyEl = document.body;
 const logo = document.getElementById('logo');
+const favicon = document.getElementById('favicon');
 
 function toggleTheme(icon) {
     if (bodyEl.classList.contains('light-mode')) {
         bodyEl.classList.replace('light-mode', 'dark-mode');
         icon.classList.replace('fa-sun', 'fa-moon');
-        logo.src = "logo-dark.png"; // tmavá varianta loga
+        logo.src = "logo-dark.png";
+        favicon.href = "logo-dark.png"; // tmavá favicona
     } else {
         bodyEl.classList.replace('dark-mode', 'light-mode');
         icon.classList.replace('fa-moon', 'fa-sun');
-        logo.src = "logo-light.png"; // světlá varianta loga
+        logo.src = "logo-light.png";
+        favicon.href = "logo-light.png"; // světlá favicona
     }
 
     updateIcons();
@@ -47,13 +50,15 @@ function updateIcons() {
     });
 }
 
-// Inicializace ikon a loga při načtení stránky
+// Inicializace ikon, loga a favicony při načtení stránky
 window.addEventListener('DOMContentLoaded', () => {
     updateIcons();
     if (bodyEl.classList.contains('dark-mode')) {
         logo.src = "logo-dark.png";
+        favicon.href = "logo-dark.png";
     } else {
         logo.src = "logo-light.png";
+        favicon.href = "logo-light.png";
     }
 });
 
