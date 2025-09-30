@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ondřej Mlčák - Portfolio</title>
+
+<!-- Bootstrap & Font -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+
+<!-- Favicon -->
+<link id="favicon" rel="icon" type="image/png" href="logo-light.png">
+</head>
+
+<body class="light-mode">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand fw-bold fs-4" href="#">
+        <img id="logo" src="logo-light.png" alt="Logo" height="60">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+  <li class="nav-item"><a class="nav-link" href="#domu"><span class="hash">#</span>domu</a></li>
+  <li class="nav-item"><a class="nav-link" href="#omne"><span class="hash">#</span>omne</a></li>
+  <li class="nav-item"><a class="nav-link" href="#schopnosti"><span class="hash">#</span>schopnosti</a></li>
+  <li class="nav-item"><a class="nav-link" href="#projekty"><span class="hash">#</span>projekty</a></li>
+  <li class="nav-item"><a class="nav-link" href="#kontakt"><span class="hash">#</span>kontakt</a></li>
+  <li class="nav-item d-lg-none mt-2">
+    <div class="theme-switch d-flex justify-content-center" id="themeSwitchMobile"><i class="fa-solid fa-sun"></i></div>
+  </li>
+</ul>
+    </div>
+    <div class="d-none d-lg-block theme-switch" id="themeSwitchDesktop"><i class="fa-solid fa-sun"></i></div>
+  </div>
+</nav>
+
+<!-- Landing Section -->
+<section class="landing-section d-flex align-items-center" id="domu">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 landing-text">
+        <p>Ahooj! Mé jméno je</p>
+        <h1>Ondřej Mlčák</h1>
+        <p>a vytvářím moderní weby a aplikace. Zde najdete ukázky mých projektů a práce, kterou jsem vytvořil.</p>
+        <a href="#kontakt" class="btn modern-btn mt-4 px-4 py-3 d-none d-md-inline-block">Kontaktujte mě</a>
+      </div>
+      <div class="col-md-6 landing-image text-center">
+    <img src="fotka1.png" alt="Fotka">
+    <a href="#kontakt" class="btn modern-btn mt-2 px-4 py-3 d-block d-md-none">Kontaktujte mě</a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sekce O mně -->
+<section id="omne">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-12 d-flex align-items-center mb-3">
+        <h2 class="me-3"><span class="hash"><strong>#</span>omne</strong></h2>
+        <div class="flex-grow-1 border-line"></div>
+      </div>
+      <div class="col-md-8">
+        <p>Jsem student Ostravské univerzity a hlavně web developer. Nejvíc mě baví tvořit moderní, responzivní a vizuálně atraktivní weby, které mají smysl a přináší užitek. Kromě webových stránek dokážu naprogramovat i aplikaci nebo menší hru.</p>
+        <p>Kóduju nápady do reality. Od prvního řádku kódu po finální kliknutí.</p>
+        <p>Co víc k sobě dodat? Momentálně mi je 19 let a ve volném čase se zajímám o sport, především o fotbal a běh. Poté mám zálibu v hudbě. Programování a tvorbu stránek jsem sem nedal, protože to už dávno není jen koníček, ale práce na plný úvazek (budoucí šéf by měl radost 😅).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sekce Schopnosti (přesunuta před Projekty) -->
+<section id="schopnosti">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-12 d-flex align-items-center mb-3">
+        <h2 class="me-3"><span class="hash"><strong>#</span>schopnosti</strong></h2>
+        <div class="flex-grow-1 border-line"></div>
+      </div>
+      <div class="col-md-12 mb-4">
+<p>Zde vidíte technologie a dovednosti, které používám nejčastěji při tvorbě webů a vlastního CMS. Na každou kartičku můžete najet myší a zobrazit podrobnější informace.</p>
+      </div>
+    </div>
+
+    <!-- Schopnosti cards -->
+    <div class="row g-4 justify-content-center">
+      <!-- HTML -->
+      <div class="col-md-3 col-sm-6">
+        <div class="skill-card text-center position-relative">
+          <span class="skill-icon"><i class="fab fa-html5 fa-4x"></i></span>
+          <div class="skill-popup position-absolute p-3 rounded">
+            <h5>HTML</h5>
+            <p>Základní stavební kámen webových stránek, strukturování obsahu a semantika.</p>
+          </div>
+          <p class="mt-2">HTML</p>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="col-md-3 col-sm-6">
+        <div class="skill-card text-center position-relative">
+          <span class="skill-icon"><i class="fab fa-css3-alt fa-4x"></i></span>
+          <div class="skill-popup position-absolute p-3 rounded">
+            <h5>CSS</h5>
+            <p>Stylování webu, animace, responzivní design a moderní layouty.</p>
+          </div>
+          <p class="mt-2">CSS</p>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="col-md-3 col-sm-6">
+        <div class="skill-card text-center position-relative">
+          <i class="fab fa-js-square fa-4x"></i>
+          <div class="skill-popup position-absolute p-3 rounded">
+            <h5>JavaScript</h5>
+            <p>Interaktivita, logika a dynamické chování webových stránek.</p>
+          </div>
+          <p class="mt-2">JavaScript</p>
+        </div>
+      </div>
+
+      <!-- MySQL -->
+        <div class="col-md-3 col-sm-6">
+            <div class="skill-card text-center position-relative">
+            <i class="fas fa-database fa-4x"></i>
+            <div class="skill-popup position-absolute p-3 rounded">
+                <h5>MySQL</h5>
+                <p>Správa databází, ukládání a načítání dat pro webové aplikace.</p>
+            </div>
+            <p class="mt-2">MySQL</p>
+            </div>
+        </div>
+        
+        <!-- Bootstrap -->
+        <div class="col-md-3 col-sm-6">
+            <div class="skill-card text-center position-relative">
+            <i class="fas fa-bold fa-4x"></i>
+            <div class="skill-popup position-absolute p-3 rounded">
+                <h5>Bootstrap</h5>
+                <p>Rychlý vývoj responzivních a moderních uživatelských rozhraní.</p>
+            </div>
+            <p class="mt-2">Bootstrap</p>
+            </div>
+        </div>
+
+      <!-- PHP -->
+      <div class="col-md-3 col-sm-6">
+        <div class="skill-card text-center position-relative">
+          <i class="fab fa-php fa-4x"></i>
+          <div class="skill-popup position-absolute p-3 rounded">
+            <h5>PHP</h5>
+            <p>Server-side skriptování, tvorba webových aplikací a API.</p>
+          </div>
+          <p class="mt-2">PHP</p>
+        </div>
+      </div>
+
+
+
+      <!-- Laravel -->
+      <div class="col-md-3 col-sm-6">
+        <div class="skill-card text-center position-relative">
+          <i class="fab fa-laravel fa-4x"></i>
+          <div class="skill-popup position-absolute p-3 rounded">
+            <h5>Laravel</h5>
+            <p>PHP framework pro moderní a efektivní webové aplikace.</p>
+          </div>
+          <p class="mt-2">Laravel</p>
+        </div>
+      </div>
+
+      <!-- Wordpress -->
+       <div class="col-md-3 col-sm-6">
+        <div class="skill-card text-center position-relative">
+          <i class="fab fa-wordpress fa-4x"></i>
+          <div class="skill-popup position-absolute p-3 rounded">
+            <h5>WordPress</h5>
+            <p>Správa obsahu, tvorba webů a blogů na populární platformě.</p>
+          </div>
+          <p class="mt-2">WordPress</p>
+        </div>
+       </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Sekce Projekty (přesunuta za Schopnosti) -->
+<section id="projekty">
+  <div class="container">
+    <!-- Nadpis a popisek -->
+    <div class="row align-items-center mb-4">
+      <div class="col-md-12 d-flex align-items-center mb-3">
+        <h2 class="me-3"><span class="hash"><strong>#</span>projekty</strong></h2>
+        <div class="flex-grow-1 border-line"></div>
+      </div>
+      <div class="col-md-12 mb-4">
+        <p>Ukazuji zde některé ze svých nejzajímavějších projektů – webové stránky a vlastní CMS. Každý z nich odráží mé schopnosti v programování, designu a řešení problémů.</p>
+        <p>Projektů jsem vytvořil samozřejmě více, ale právě tyto považuji za své nejlepší. Pokud byste se chtěli dozvědět více, neváhejte mě kontaktovat.</p>
+      </div>
+    </div>
+
+    <!-- Projekty -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="project-block mb-4">
+          <img src="ak-brezina.png" class="img-fluid rounded mb-3" alt="Advokát Březina">
+          <h4>Advokát Březina</h4>
+          <div class="tags mb-2">
+            <span class="badge">HTML</span>
+            <span class="badge">Bootstrap</span>
+          </div>
+          <p class="description">Jednoduchá a přehledná webová prezentace advokátní kanceláře s důrazem na čistý design a rychlou orientaci.</p>
+          <a href="https://www.advokatbrezina.cz/" target="_blank" class="btn btn-primary btn-lg modern-btn">Zjistit více</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-block mb-4">
+          <img src="kv-components.png" class="img-fluid rounded mb-3" alt="KVcomponents">
+          <h4>KVcomponents</h4>
+          <div class="tags mb-2">
+            <span class="badge">HTML</span>
+            <span class="badge">Bootstrap</span>
+          </div>
+          <p class="description">Produktový katalog pro výrobce pergol a stínící techniky s důrazem na jednoduchost a rychlé vyhledávání.</p>
+          <a href="https://www.kvcomponents.com/pergoly/index.html" target="_blank" class="btn btn-primary btn-lg modern-btn">Zjistit více</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-block mb-4">
+          <img src="tipandgo.png" class="img-fluid rounded mb-3" alt="TipAndGo">
+          <h4>TipAndGo</h4>
+          <div class="tags mb-2">
+            <span class="badge">CMS</span>
+            <span class="badge">Laravel</span>
+          </div>
+          <p class="description">Vlastní redakční systém pro správu obsahu a tipů na výlety, zaměřený na jednoduché ovládání a moderní vzhled.</p>
+          <a href="https://youtu.be/T_Jn84j8A6A" target="_blank" class="btn btn-primary btn-lg modern-btn">Zjistit více</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sekce Kontakt -->
+<section id="kontakt">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-12 d-flex align-items-center mb-3">
+        <h2 class="me-3"><span class="hash"><strong>#</span>kontakt</strong></h2>
+        <div class="flex-grow-1 border-line"></div>
+      </div>
+      <div class="col-md-12 mb-4">
+        <p>Najdete mě na sociálních sítích a profesionálních profilech. Kliknutím na kartu se dostanete přímo na můj profil.</p>
+      </div>
+    </div>
+
+    <!-- Kontakt cards -->
+    <div class="row g-4 justify-content-center text-center">
+      <!-- Instagram -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+        <a href="https://instagram.com/ondrejmlcakkk" target="_blank" class="contact-card d-block p-3 rounded border shadow-sm text-decoration-none">
+          <span class="contact-icon"><i class="fab fa-instagram fa-3x mb-2"></i></span>
+          <span class="contact-name mb-0">Instagram</span>
+        </a>
+      </div>
+      <!-- Discord -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+        <a href="https://discord.com/users/ondrejinho" target="_blank" class="contact-card d-block p-3 rounded border shadow-sm text-decoration-none">
+          <span class="contact-icon"><i class="fab fa-discord fa-3x mb-2"></i></span>
+          <span class="contact-name mb-0">Discord</span>
+        </a>
+      </div>
+      <!-- Email -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+        <a href="mailto:ondrejmlcak14@gmail.com" class="contact-card d-block p-3 rounded border shadow-sm text-decoration-none">
+          <span class="contact-icon"><i class="fas fa-envelope fa-3x mb-2"></i></span>
+          <span class="contact-name mb-0">Gmail</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Tlačítka pod kartami -->
+    <div class="row g-3 justify-content-center mt-3">
+      <!-- GitHub -->
+      <div class="col-6 col-sm-4 col-md-3">
+        <a href="https://github.com/ondrejmlcak" target="_blank" class="btn theme-btn d-flex align-items-center justify-content-center w-100 py-3 px-4">
+          <i class="fab fa-github me-2"></i>
+          <span class="btn-text">GitHub</span>
+        </a>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="col-6 col-sm-4 col-md-3">
+        <a href="https://www.linkedin.com/in/ond%C5%99ej-ml%C4%8D%C3%A1k-73b524329/" target="_blank" class="btn theme-btn d-flex align-items-center justify-content-center w-100 py-3 px-4">
+          <i class="fab fa-linkedin me-2"></i>
+          <span class="btn-text">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="text-center py-4 mt-5">
+  <div class="container">
+    <p>&copy; 2025 Ondřej Mlčák. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
+
+<!-- Animovaný kurzor -->
+<div id="cursor-dot"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
