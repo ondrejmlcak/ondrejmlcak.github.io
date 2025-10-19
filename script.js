@@ -11,13 +11,13 @@ function toggleTheme(icon) {
     if (bodyEl.classList.contains('light-mode')) {
         bodyEl.classList.replace('light-mode', 'dark-mode');
         icon.classList.replace('fa-sun', 'fa-moon');
-        logo.src = "logo-dark.png";
-        favicon.href = "logo-dark.png"; // tmavá favicona
+        logo.src = "logo-dark.webp";
+        favicon.href = "logo-dark.webp"; // tmavá favicona
     } else {
         bodyEl.classList.replace('dark-mode', 'light-mode');
         icon.classList.replace('fa-moon', 'fa-sun');
-        logo.src = "logo-light.png";
-        favicon.href = "logo-light.png"; // světlá favicona
+        logo.src = "logo-light.webp";
+        favicon.href = "logo-light.webp"; // světlá favicona
     }
 
     updateIcons();
@@ -54,11 +54,11 @@ function updateIcons() {
 window.addEventListener('DOMContentLoaded', () => {
     updateIcons();
     if (bodyEl.classList.contains('dark-mode')) {
-        logo.src = "logo-dark.png";
-        favicon.href = "logo-dark.png";
+        logo.src = "logo-dark.webp";
+        favicon.href = "logo-dark.webp";
     } else {
-        logo.src = "logo-light.png";
-        favicon.href = "logo-light.png";
+        logo.src = "logo-light.webp";
+        favicon.href = "logo-light.webp";
     }
 });
 
