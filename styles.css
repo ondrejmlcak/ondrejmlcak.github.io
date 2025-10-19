@@ -378,6 +378,12 @@ body.dark-mode .skill-card i {
     text-align: center;
 }
 
+.skill-popup h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
 .skill-card:hover .skill-popup {
     opacity: 1;
     pointer-events: auto;
