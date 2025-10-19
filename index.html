@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ondřej Mlčák - Portfolio</title>
 
-<!-- Bootstrap -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<!-- Bootstrap CSS (lokální z node_modules) -->
+<link rel="preload" href="node_modules/bootstrap/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </noscript>
+
 
 <!-- Font Awesome -->
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -395,7 +396,8 @@
 <!-- Animovaný kurzor -->
 <div id="cursor-dot"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+<!-- Bootstrap JS (lokální z node_modules) -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
 <script src="script.js" defer></script>
 </body>
 </html>

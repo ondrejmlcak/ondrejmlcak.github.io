@@ -115,5 +115,3 @@ document.querySelectorAll('.nav-link, .theme-switch').forEach(el => {
     el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-ring'));
 });
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
