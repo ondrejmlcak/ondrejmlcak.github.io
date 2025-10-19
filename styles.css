@@ -397,11 +397,6 @@ body.dark-mode .skill-card i {
     transition: transform 0.2s;
 }
 
-#projekty .badge:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
 /* Projekty overlay a hover */
 .project-card {
     cursor: pointer;
@@ -440,25 +435,6 @@ body.dark-mode .skill-card i {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-}
-
-.project-overlay .tags .badge {
-    background: none;
-    color: var(--navbar-link-hover);
-    border: 2px solid var(--navbar-link-hover);
-    border-radius: 8px;
-    padding: 0.35em 0.9em;
-    font-size: 0.95em;
-    font-weight: 500;
-    margin: 0 0.25em 0.3em 0.25em;
-    box-shadow: none;
-    transition: border-color 0.3s, color 0.3s;
-}
-
-body.dark-mode .project-overlay .tags .badge {
-    color: var(--navbar-link-hover);
-    border-color: var(--navbar-link-hover);
-    background: none;
 }
 
 .project-overlay .description {
@@ -550,8 +526,8 @@ html,
 .project-block .tags .badge {
     /* zachová minimalistický styl badge */
     background: none;
-    color: var(--navbar-link-hover);
-    border: 2px solid var(--navbar-link-hover);
+    color: #1756c9;
+    border: 2px solid #1756c9;
     border-radius: 8px;
     padding: 0.35em 0.9em;
     font-size: 0.95em;
@@ -559,6 +535,12 @@ html,
     margin: 0 0.25em 0.3em 0.25em;
     box-shadow: none;
     transition: border-color 0.3s, color 0.3s;
+}
+
+.dark-mode .project-block .tags .badge {
+    color: #ff6f91;
+    /* světlejší růžová – lepší kontrast */
+    border-color: #ff6f91;
 }
 
 /* Přidat do existujících stylů */
