@@ -117,6 +117,7 @@ body.dark-mode {
 .landing-text h1 {
     font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .landing-text p {
@@ -177,6 +178,8 @@ section {
 }
 
 /* Barevné # v nadpisech sekcí */
+h3 .hash,
+h4 .hash,
 h2 .hash,
 h1 .hash {
     color: var(--navbar-link-hover);
@@ -381,18 +384,6 @@ body.dark-mode .skill-card i {
     transform: translateX(-50%) translateY(-20px);
 }
 
-.project-block h5 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-}
-
-.skill-popup h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
 /* Skills badges */
 #projekty .badge {
     font-size: 0.9rem;
@@ -562,4 +553,39 @@ html,
     margin: 0 0.25em 0.3em 0.25em;
     box-shadow: none;
     transition: border-color 0.3s, color 0.3s;
+}
+
+/* Přidat do existujících stylů */
+h1.me-3,
+h2.me-3,
+h3.me-3,
+h4.me-3,
+h5.me-3 {
+    font-size: 2rem;
+    /* původní velikost nadpisů sekcí */
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* Upravit specifické styly pro landing-text */
+.landing-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Zachovat stejný styl pro nadpisy v kartách */
+.skill-popup h1,
+.skill-popup h2,
+.skill-popup h3,
+.skill-popup h4,
+.skill-popup h5,
+.project-block h1,
+.project-block h2,
+.project-block h3,
+.project-block h4,
+.project-block h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
 }
