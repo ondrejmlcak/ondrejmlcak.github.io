@@ -381,6 +381,18 @@ body.dark-mode .skill-card i {
     transform: translateX(-50%) translateY(-20px);
 }
 
+.project-block h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.skill-popup h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
 /* Skills badges */
 #projekty .badge {
     font-size: 0.9rem;
