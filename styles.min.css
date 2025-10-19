@@ -1,0 +1,441 @@
+/* Reset a font */
+html,
+body {
+    height: 100%;
+    font-family: 'Merriweather', serif;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s, color 0.3s;
+    padding-top: 40px;
+    /* posun pro fixní navbar */
+}
+
+/* Na mobilech větší posun kvůli vyššímu navbaru + větší mezera pod menu */
+@media (max-width: 768px) {
+
+    html,
+    body {
+        padding-top: 60px;
+        /* zvýšeno z 40px na 60px */
+    }
+
+    .landing-section {
+        padding-top: 30px;
+        /* přidá větší mezeru pod menu */
+    }
+
+    .landing-image img {
+        height: 35vh;
+        padding-bottom: 30px;
+    }
+
+    .landing-image .modern-btn {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        display: block !important;
+        /* zajistí, že tlačítko je vždy viditelné na mobilu */
+    }
+}
+
+/* Světlé a tmavé téma */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+    --navbar-bg: #ffffff;
+    --navbar-link: #000000;
+    --navbar-link-hover: #4facfe;
+    --navbar-border: #4facfe;
+    --accent: #4facfe;
+    --accent2: #00f2fe;
+}
+
+#logo {
+    height: 50px;
+    width: auto;
+    transition: 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    border-bottom: 2px solid var(--navbar-border);
+    z-index: 1000;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.navbar .nav-link {
+    color: var(--navbar-link);
+    margin: 0 0.5rem;
+    position: relative;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--navbar-link-hover);
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+.theme-switch {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Landing */
+.landing-section {
+    height: calc(100vh - 70px);
+}
+
+.landing-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.landing-text p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.landing-image img {
+    max-width: 100%;
+    height: 65vh;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Na mobilech menší obrázek */
+@media (max-width: 768px) {
+    .landing-image img {
+        height: 45vh;
+        padding-bottom: 30px;
+    }
+
+    .landing-image .modern-btn {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        /* Zvětší odsazení tlačítka od obrázku i od menu */
+    }
+}
+
+/* Menší mezery mezi sekcemi */
+section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Border-line animace */
+.border-line {
+    border-bottom: 2px solid var(--navbar-border);
+    height: 2px;
+    animation: line-pulse 2s ease-in-out infinite;
+    transform-origin: left;
+}
+
+@keyframes line-pulse {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
+
+/* Barevné # v nadpisech sekcí */
+h3 .hash,
+h2 .hash,
+h1 .hash {
+    color: var(--navbar-link-hover);
+    transition: color 0.3s;
+}
+
+/* Barevné # v menu - každý # má barvu podle tématu */
+.navbar .nav-link .hash {
+    color: var(--navbar-link-hover);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Moderní tlačítka */
+.modern-btn {
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent2) 100%);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modern-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.modern-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 255, 254, 0.4);
+}
+
+/* Animovaný kurzor */
+#cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, transform 0.1s ease, background-color 0.2s;
+    z-index: 10000;
+}
+
+/* Efekt kruhu kolem tečky při hoveru na menu nebo na přepínač tématu */
+
+/* Karty kontaktů podle motivu */
+.contact-card {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+}
+
+.contact-icon i {
+    color: currentColor;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.contact-icon:hover i {
+    transform: scale(1.3);
+    color: #4facfe;
+}
+
+.contact-name {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    transition: color 0.3s;
+}
+
+/* Barvy podle tématu */
+body.light-mode .contact-name,
+body.light-mode .contact-icon i,
+body.light-mode .skill-icon i {
+    color: #212529;
+}
+
+/* Skill cards */
+.skill-card {
+    background: var(--card-bg, #f5f5f5);
+    border-radius: 12px;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* Skill cards - barvy podle tématu */
+.skill-card {
+    background: #f5f5f5;
+    color: #212529;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ikony */
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.2);
+}
+
+/* Ikony ve skill-cards */
+body.light-mode .skill-card i {
+    color: #212529;
+}
+
+/* Přechody pro text a ikony */
+.skill-card i,
+.contact-icon i,
+.skill-card p,
+.contact-name {
+    transition: color 0.3s ease;
+}
+
+/* Popup */
+.skill-popup {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    width: 200px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.skill-popup h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+.skill-card:hover .skill-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(-20px);
+}
+
+/* Skills badges */
+#projekty .badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    transition: transform 0.2s;
+}
+
+/* Projekty overlay a hover */
+
+/* Tlačítka podle tématu */
+.theme-btn {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000000;
+    transition: 0.3s;
+}
+
+/* Hover efekt na text v tlačítku */
+.theme-btn:hover .btn-text {
+    transform: translateY(-2px);
+    font-weight: 600;
+}
+
+/* Hover efekt na karty kontaktů */
+.contact-card:hover p {
+    font-weight: 600;
+    color: #0d6efd;
+    transition: 0.3s;
+}
+
+footer {
+    background-color: var(--navbar-bg);
+    color: var(--navbar-link);
+    border-top: 2px solid var(--navbar-border);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Hamburger menu barva podle tématu */
+
+/* Skryj vlastní kurzor, zobraz pouze modrou tečku */
+body,
+html,
+* {
+    cursor: none !important;
+}
+
+/* Na telefonech (max-width: 768px) tečku vůbec nezobrazuj */
+@media (max-width: 768px) {
+    #cursor-dot {
+        display: none !important;
+    }
+
+    body,
+    html,
+    * {
+        cursor: auto !important;
+    }
+}
+
+.project-block {
+    background: none;
+    box-shadow: none;
+    border-radius: 12px;
+    padding: 0;
+    transition: none;
+    text-align: left;
+}
+
+.project-block img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-block .tags .badge {
+    /* zachová minimalistický styl badge */
+    background: none;
+    color: #1756c9;
+    border: 2px solid #1756c9;
+    border-radius: 8px;
+    padding: 0.35em 0.9em;
+    font-size: 0.95em;
+    font-weight: 500;
+    margin: 0 0.25em 0.3em 0.25em;
+    box-shadow: none;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+/* Přidat do existujících stylů */
+h1.me-3,
+h2.me-3,
+h3.me-3 {
+    font-size: 2rem;
+    /* původní velikost nadpisů sekcí */
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* Upravit specifické styly pro landing-text */
+.landing-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Zachovat stejný styl pro nadpisy v kartách */
+.skill-popup h1,
+.skill-popup h2,
+.skill-popup h3,
+.project-block h1,
+.project-block h2,
+.project-block h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}

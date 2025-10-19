@@ -48,17 +48,6 @@ body.light-mode {
     --accent2: #00f2fe;
 }
 
-body.dark-mode {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    --navbar-bg: #1a1a1a;
-    --navbar-link: #ffffff;
-    --navbar-link-hover: #ff4f81;
-    --navbar-border: #ff4f81;
-    --accent: #ff4f81;
-    --accent2: #ff8fa3;
-}
-
 #logo {
     height: 50px;
     width: auto;
@@ -95,13 +84,8 @@ body.dark-mode {
     transition: width 0.3s ease;
 }
 
-.navbar .nav-link:hover::after,
-.navbar .nav-link.active::after {
+.navbar .nav-link:hover::after {
     width: 100%;
-}
-
-.navbar .nav-link.active {
-    color: var(--navbar-link-hover) !important;
 }
 
 .theme-switch {
@@ -179,7 +163,6 @@ section {
 
 /* Barevné # v nadpisech sekcí */
 h3 .hash,
-h4 .hash,
 h2 .hash,
 h1 .hash {
     color: var(--navbar-link-hover);
@@ -228,25 +211,7 @@ h1 .hash {
     z-index: 10000;
 }
 
-.cursor-hover {
-    background-color: var(--accent2) !important;
-}
-
-.cursor-text {
-    width: 16px !important;
-    height: 16px !important;
-}
-
 /* Efekt kruhu kolem tečky při hoveru na menu nebo na přepínač tématu */
-.cursor-ring {
-    box-shadow: 0 0 0 16px rgba(79, 172, 254, 0.25), 0 0 0 32px rgba(113, 194, 252, 0.15);
-    /* Modrý kruh pro světlé téma, růžový pro tmavé */
-    transition: box-shadow 0.2s;
-}
-
-body.dark-mode .cursor-ring {
-    box-shadow: 0 0 0 16px rgba(255, 79, 129, 0.25), 0 0 0 32px rgba(255, 143, 163, 0.15);
-}
 
 /* Karty kontaktů podle motivu */
 .contact-card {
@@ -256,19 +221,8 @@ body.dark-mode .cursor-ring {
     transition: 0.3s;
 }
 
-.dark-mode .contact-card {
-    background-color: #222;
-    color: #fff;
-    border-color: #555;
-}
-
 .contact-card:hover {
     transform: translateY(-3px);
-}
-
-.contact-card:hover .contact-text {
-    font-weight: 600;
-    transition: 0.3s;
 }
 
 .contact-icon i {
@@ -295,12 +249,6 @@ body.light-mode .skill-icon i {
     color: #212529;
 }
 
-body.dark-mode .contact-name,
-body.dark-mode .contact-icon i,
-body.dark-mode .skill-icon i {
-    color: #f8f9fa;
-}
-
 /* Skill cards */
 .skill-card {
     background: var(--card-bg, #f5f5f5);
@@ -314,20 +262,6 @@ body.dark-mode .skill-icon i {
 .skill-card {
     background: #f5f5f5;
     color: #212529;
-}
-
-body.dark-mode .skill-card {
-    background: #222;
-    color: #fff;
-}
-
-body.dark-mode .skill-card i {
-    color: #fff;
-}
-
-body.dark-mode .skill-card p,
-body.dark-mode .skill-card h5 {
-    color: #fff;
 }
 
 .skill-card:hover {
@@ -350,10 +284,6 @@ body.dark-mode .skill-card h5 {
 /* Ikony ve skill-cards */
 body.light-mode .skill-card i {
     color: #212529;
-}
-
-body.dark-mode .skill-card i {
-    color: #f8f9fa;
 }
 
 /* Přechody pro text a ikony */
@@ -398,49 +328,6 @@ body.dark-mode .skill-card i {
 }
 
 /* Projekty overlay a hover */
-.project-card {
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.project-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    border-radius: 8px 8px 0 0;
-    transition: filter 0.3s;
-    /* odstraněno zvětšování */
-}
-
-.project-card:hover img {
-    /* transform: scale(1.05);  odstraněno zvětšování */
-    filter: brightness(0.7);
-}
-
-.project-overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s;
-    border-radius: 12px;
-}
-
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-overlay h4 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.project-overlay .description {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
 
 /* Tlačítka podle tématu */
 .theme-btn {
@@ -448,12 +335,6 @@ body.dark-mode .skill-card i {
     background-color: #fff;
     color: #000000;
     transition: 0.3s;
-}
-
-.dark-mode .theme-btn {
-    background-color: #222;
-    color: #fff;
-    border-color: #555;
 }
 
 /* Hover efekt na text v tlačítku */
@@ -477,13 +358,6 @@ footer {
 }
 
 /* Hamburger menu barva podle tématu */
-body.dark-mode .navbar-toggler {
-    border-color: #fff;
-}
-
-body.dark-mode .navbar-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
 
 /* Skryj vlastní kurzor, zobraz pouze modrou tečku */
 body,
@@ -537,18 +411,10 @@ html,
     transition: border-color 0.3s, color 0.3s;
 }
 
-.dark-mode .project-block .tags .badge {
-    color: #ff6f91;
-    /* světlejší růžová – lepší kontrast */
-    border-color: #ff6f91;
-}
-
 /* Přidat do existujících stylů */
 h1.me-3,
 h2.me-3,
-h3.me-3,
-h4.me-3,
-h5.me-3 {
+h3.me-3 {
     font-size: 2rem;
     /* původní velikost nadpisů sekcí */
     font-weight: 600;
@@ -566,13 +432,9 @@ h5.me-3 {
 .skill-popup h1,
 .skill-popup h2,
 .skill-popup h3,
-.skill-popup h4,
-.skill-popup h5,
 .project-block h1,
 .project-block h2,
-.project-block h3,
-.project-block h4,
-.project-block h5 {
+.project-block h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
