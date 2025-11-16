@@ -577,3 +577,30 @@ h5.me-3 {
     font-weight: 600;
     margin-bottom: 0.75rem;
 }
+
+:root {
+    --nav-offset: 30px;
+    /* fallback, bude přepsáno JS na přesnou výšku navbaru */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-offset);
+}
+
+/* Fallback pro prohlížeče bez scroll-padding-top nebo pokud chcete jemnější kontrolu */
+h1,
+h2,
+h3,
+h4,
+h5,
+section[id] {
+    scroll-margin-top: var(--nav-offset);
+}
+
+/* Mobilní výchozí změna (JS nastaví přesnou výšku i zde) */
+@media (max-width: 768px) {
+    :root {
+        --nav-offset: 30px;
+    }
+}
